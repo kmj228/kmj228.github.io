@@ -911,4 +911,6 @@ footer span { color: var(--accent); font-weight: 500; }
 
   .divider { padding: 0 20px; }
   footer { padding: 18px 20px; }
+  
+  .scroll-hint { display: none; }
 }
