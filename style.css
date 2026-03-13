@@ -15,6 +15,7 @@
   --radius:    14px;
   --shadow:    0 2px 16px rgba(58, 123, 213, 0.07);
   --shadow-h:  0 8px 32px rgba(58, 123, 213, 0.14);
+  --nav-h:     70px;
 }
 
 /* ════════════════════════════════════════
@@ -30,6 +31,14 @@ body {
   font-weight: 300;
   overflow-x: hidden;
   line-height: 1.75;
+}
+
+/* ════════════════════════════════════════
+   SCROLL MARGIN (navbar 가림 방지)
+════════════════════════════════════════ */
+#hero,
+.sticky-section {
+  scroll-margin-top: var(--nav-h);
 }
 
 /* ════════════════════════════════════════
@@ -92,15 +101,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 72px;
-  background: rgba(255, 255, 255, 0.9);
+  padding: 18px 72px;
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
   transition: padding 0.35s, box-shadow 0.35s;
 }
 
 nav.scrolled {
-  padding: 13px 72px;
+  padding: 12px 72px;
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
 }
 
@@ -151,8 +160,6 @@ main { position: relative; }
 .divider hr { border: none; border-top: 1px solid var(--border); }
 
 /* ── STICKY SECTION LAYOUT ── */
-/* Sections with sticky title use a two-column layout:
-   left = sticky label | right = content */
 .sticky-section {
   max-width: 1160px;
   margin: 0 auto;
@@ -165,7 +172,7 @@ main { position: relative; }
 
 .sticky-label {
   position: sticky;
-  top: 100px;
+  top: calc(var(--nav-h) + 20px);
 }
 
 .sticky-label .sec-num {
@@ -210,6 +217,7 @@ main { position: relative; }
   align-items: center;
   gap: 80px;
   padding-top: 120px;
+  position: relative;
 }
 
 .hero-text { flex: 1; }
@@ -277,7 +285,7 @@ main { position: relative; }
   animation: fadeUp 0.7s 0.3s ease both;
 }
 
-/* Buttons */
+/* ── BUTTONS ── */
 .btn {
   padding: 12px 26px;
   border-radius: 8px;
@@ -314,11 +322,11 @@ main { position: relative; }
   color: var(--accent);
 }
 
-/* Hero Photo + Parallax */
+/* ── HERO PHOTO ── */
 .hero-photo {
   flex-shrink: 0;
   animation: fadeUp 0.7s 0.15s ease both;
-  border-radius: 20px;
+  /* overflow, border-radius 제거 → 뱃지가 잘리지 않음 */
 }
 
 .photo-wrap {
@@ -359,7 +367,7 @@ main { position: relative; }
   font-family: 'Outfit', sans-serif;
 }
 
-/* Hero scroll hint */
+/* ── SCROLL HINT ── */
 .scroll-hint {
   position: absolute;
   bottom: 40px;
@@ -393,7 +401,7 @@ main { position: relative; }
 }
 
 /* ════════════════════════════════════════
-   ABOUT (sticky layout)
+   ABOUT
 ════════════════════════════════════════ */
 .about-grid {
   display: grid;
@@ -454,7 +462,6 @@ main { position: relative; }
   padding-left: 28px;
 }
 
-/* vertical line */
 .timeline::before {
   content: '';
   position: absolute;
@@ -471,7 +478,6 @@ main { position: relative; }
 
 .timeline-item:last-child { margin-bottom: 0; }
 
-/* dot */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -538,7 +544,7 @@ main { position: relative; }
 }
 
 /* ════════════════════════════════════════
-   SKILLS (sticky layout)
+   SKILLS
 ════════════════════════════════════════ */
 #skills-section { background: var(--bg); }
 
@@ -623,7 +629,7 @@ main { position: relative; }
 }
 
 /* ════════════════════════════════════════
-   PROJECTS (sticky layout)
+   PROJECTS
 ════════════════════════════════════════ */
 #projects-section { background: var(--bg2); }
 
@@ -665,9 +671,7 @@ main { position: relative; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-    rgba(58,123,213,0.06) 0%,
-    transparent 60%);
+  background: linear-gradient(135deg, rgba(58, 123, 213, 0.06) 0%, transparent 60%);
 }
 
 .project-body { padding: 22px 24px; flex: 1; display: flex; flex-direction: column; }
@@ -723,9 +727,9 @@ main { position: relative; }
   text-transform: uppercase;
 }
 
-.status-done  { color: #22a06b; }
-.status-wip   { color: #e57c00; }
-.status-plan  { color: var(--muted); }
+.status-done { color: #22a06b; }
+.status-wip  { color: #e57c00; }
+.status-plan { color: var(--muted); }
 
 .project-link {
   font-size: 0.78rem;
@@ -741,7 +745,7 @@ main { position: relative; }
 .project-link:hover { gap: 8px; }
 
 /* ════════════════════════════════════════
-   CONTACT (sticky layout)
+   CONTACT
 ════════════════════════════════════════ */
 #contact-section { background: var(--bg); }
 
@@ -834,7 +838,6 @@ footer span { color: var(--accent); font-weight: 500; }
 
 .reveal.visible { opacity: 1; transform: none; }
 
-/* stagger delays for grids */
 .reveal-delay-1 { transition-delay: 0.08s; }
 .reveal-delay-2 { transition-delay: 0.16s; }
 .reveal-delay-3 { transition-delay: 0.24s; }
@@ -852,6 +855,8 @@ footer span { color: var(--accent); font-weight: 500; }
    RESPONSIVE — 960px
 ════════════════════════════════════════ */
 @media (max-width: 960px) {
+  :root { --nav-h: 60px; }
+
   nav, nav.scrolled { padding-left: 32px; padding-right: 32px; }
 
   #hero {
@@ -871,20 +876,16 @@ footer span { color: var(--accent); font-weight: 500; }
   }
 
   .sticky-label { position: static; }
-
   .sticky-label .sec-title { font-size: 1.6rem; }
 
   .about-grid { grid-template-columns: 1fr; }
   .info-card.wide { grid-column: auto; }
 
   .project-grid { grid-template-columns: 1fr; }
-
   .learning-grid { grid-template-columns: 1fr; }
-
   .contact-wrap { grid-template-columns: 1fr; }
 
   .divider { padding: 0 32px; }
-
   footer { padding: 22px 32px; }
 }
 
@@ -892,6 +893,8 @@ footer span { color: var(--accent); font-weight: 500; }
    RESPONSIVE — 560px
 ════════════════════════════════════════ */
 @media (max-width: 560px) {
+  :root { --nav-h: 54px; }
+
   nav { padding-left: 20px; padding-right: 20px; }
   .nav-links { display: none; }
 
@@ -903,6 +906,8 @@ footer span { color: var(--accent); font-weight: 500; }
 
   .hero-btns { flex-direction: column; }
   .btn { text-align: center; }
+
+  #back-to-top { bottom: 20px; right: 20px; }
 
   .divider { padding: 0 20px; }
   footer { padding: 18px 20px; }
