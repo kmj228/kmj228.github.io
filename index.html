@@ -11,18 +11,27 @@
 </head>
 <body>
 
+  <!-- 스크롤 진행 바 -->
+  <div id="progress-bar"></div>
+
+  <!-- NAV -->
   <nav id="navbar">
     <div class="nav-logo">KMJ</div>
     <ul class="nav-links">
-      <li><a href="#about">소개</a></li>
-      <li><a href="#skills">기술</a></li>
-      <li><a href="#contact">연락처</a></li>
+      <li><a href="#about-section">소개</a></li>
+      <li><a href="#timeline-section">타임라인</a></li>
+      <li><a href="#skills-section">기술</a></li>
+      <li><a href="#projects-section">프로젝트</a></li>
+      <li><a href="#contact-section">연락처</a></li>
     </ul>
   </nav>
 
   <main>
 
-    <section id="hero">
+    <!-- ══════════════════════════════
+         HERO
+    ══════════════════════════════ -->
+     <section id="hero">
       <div class="hero-text">
         <div class="hero-eyebrow">About Me 2026</div>
         <h1 class="hero-name">김민재</h1>
@@ -30,9 +39,7 @@
         <p class="hero-desc">
           <strong>한국공학대학교 AI소프트웨어학과</strong> 2학년
           <br />
-          온라인 강의와 Git을 활용한 학습으로
-          <br />
-          웹 개발의 첫 발걸음을 내딛고 있습니다.
+          새로운 것에 도전하고 배우는 걸 좋아합니다
         </p>
         <div class="hero-btns">
           <a href="#contact" class="btn btn-primary">연락하기</a>
@@ -52,121 +59,332 @@
 
     <div class="divider"><hr /></div>
 
-    <section id="about">
-      <div class="sec-header reveal">
+    <!-- ══════════════════════════════
+         ABOUT  (sticky label)
+    ══════════════════════════════ -->
+    <section id="about-section" class="sticky-section">
+
+      <div class="sticky-label">
         <span class="sec-num">01</span>
         <h2 class="sec-title">소개</h2>
         <div class="sec-line"></div>
       </div>
-      <div class="about-grid">
-        <div class="info-card reveal">
-          <div class="card-label">소속 대학교</div>
-          <div class="card-value">한국공학대학교</div>
-          <div class="card-desc">산업통상자원부가 설립한 이공계 특화 4년제 국책형 사립 종합대학</div>
-        </div>
-        <div class="info-card reveal">
-          <div class="card-label">학과 &amp; 학년</div>
-          <div class="card-value">AI소프트웨어학과</div>
-          <div class="card-desc">현재 2학년 재학 중</div>
-        </div>
-        <div class="info-card wide reveal">
-          <div class="card-label">학과 소개</div>
-          <div class="card-value">디지털 대전환 시대의 기술혁신을 선도하는 학과</div>
-          <div class="card-desc">
-            산업수요에 부응하는 실천적·창의적 문제해결 능력을 갖춘 
-            <br /> AI 소프트웨어를 개발할 수 있는 <strong>실무형 인재 양성</strong>을 목표로 합니다.
+
+      <div class="sticky-content">
+        <div class="about-grid">
+          <div class="info-card reveal">
+            <div class="card-label">소속 대학교</div>
+            <div class="card-value">한국공학대학교</div>
+            <div class="card-desc">대한민국 산업통상자원부가 설립한 <br> 이공계 특화 4년제 국책형 사립 종합대학</div>
+          </div>
+          <div class="info-card reveal reveal-delay-1">
+            <div class="card-label">학과 &amp; 학년</div>
+            <div class="card-value">AI소프트웨어학과</div>
+            <div class="card-desc">현재 2학년 재학 중</div>
+          </div>
+          <div class="info-card wide reveal reveal-delay-2">
+            <div class="card-label">학과 소개</div>
+            <div class="card-value">디지털 대전환 시대의 기술혁신을 선도하는 학과</div>
+            <div class="card-desc">
+              산업수요에 부응하는 실천적·창의적 문제해결 능력을 갖춘 AI 소프트웨어를 개발할 수 있는 
+              <br> <strong>실무형 인재 양성</strong>을 목표로 합니다
+            </div>
           </div>
         </div>
       </div>
+
     </section>
 
     <div class="divider"><hr /></div>
 
-    <section id="skills">
-      <div class="sec-header reveal">
+    <!-- ══════════════════════════════
+         TIMELINE  (sticky label)
+    ══════════════════════════════ -->
+    <section id="timeline-section" class="sticky-section">
+
+      <div class="sticky-label">
         <span class="sec-num">02</span>
-        <h2 class="sec-title">기술 스택</h2>
+        <h2 class="sec-title">타임라인</h2>
         <div class="sec-line"></div>
-      </div>
-      <div class="skills-grid reveal">
-        <div class="skill-chip"><div class="skill-icon">©️</div><div class="skill-name">C</div></div>
-        <div class="skill-chip"><div class="skill-icon">⚙️</div><div class="skill-name">C++</div></div>
-        <div class="skill-chip"><div class="skill-icon">☕</div><div class="skill-name">Java</div></div>
-        <div class="skill-chip"><div class="skill-icon">🤖</div><div class="skill-name">Kotlin</div></div>
-        <div class="skill-chip"><div class="skill-icon">🐍</div><div class="skill-name">Python</div></div>
-        <div class="skill-chip"><div class="skill-icon">🗄️</div><div class="skill-name">MySQL</div></div>
-        <div class="skill-chip"><div class="skill-icon">🌐</div><div class="skill-name">HTML / CSS</div></div>
       </div>
 
-      <div class="sec-header sec-header-sub reveal">
-        <span class="sec-num sec-num-arrow">→</span>
-        <h3 class="sec-title sec-title-sm">현재 학습 중</h3>
-        <div class="sec-line"></div>
-      </div>
-      <div class="learning-grid">
-        <div class="learning-card reveal">
-          <div class="learning-tag">학습중</div>
-          <div class="learning-title">RPA</div>
-          <div class="learning-desc"> 반복적인 업무를 자동화하는 기술을 익히고 있습니다</div>
+      <div class="sticky-content">
+        <div class="timeline">
+
+          <div class="timeline-item active reveal">
+            <div class="tl-badge">현재</div>
+            <div class="tl-date">2025. 10 — 현재</div>
+            <div class="tl-title">한국공학대학교</div>
+            <div class="tl-sub">AI소프트웨어학과 · 2학년 재학</div>
+            <div class="tl-desc">
+              RPA, 웹 프로그래밍 등 심화 과목을 수강하며 실무 역량을 키우고 있습니다
+            </div>
+          </div>
+          
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="tl-date">2024. 07 — 2025. 08</div>
+            <div class="tl-title">군휴학</div>
+            <div class="tl-sub">대한민국 육군 레이더병</div>
+            <div class="tl-desc">
+              간첩선, 반잠수정, 잠수함 간첩 침투를 탐지하고 조기 포착 임무 수행
+            </div>
+          </div>
+
+          <div class="timeline-item reveal reveal-delay-2">
+            <div class="tl-date">2024. 03 — 2024. 07</div>
+            <div class="tl-title">한국공학대학교</div>
+            <div class="tl-sub">AI소프트웨어학과 · 1학년</div>
+            <div class="tl-desc">
+              C, Python, Java 등 프로그래밍 기초를 다지고 MySQL과 알고리즘 과목을 이수했습니다
+            </div>
+          </div>
+
+          <div class="timeline-item reveal reveal-delay-3">
+            <div class="tl-date">2023. 12 — 2024. 03</div>
+            <div class="tl-title">프로그래밍 학원</div>
+            <div class="tl-sub">JAVA 및 MySQL</div>
+            <div class="tl-desc">
+              대학교 진학 전 JAVA와 MySQL 기초를 사전에 학습 하였습니다
+            </div>
+          </div>
+
+          <div class="timeline-item reveal reveal-delay-3">
+            <div class="tl-date">2021. 03 — 2023. 12</div>
+            <div class="tl-title">고등학교 졸업</div>
+            <div class="tl-sub">일반 고등학교</div>
+            <div class="tl-desc">
+              소프트웨어·인공지능 분야에 관심을 갖고 관련 학과 진학을 목표로 준비했습니다
+            </div>
+          </div>
+
         </div>
-        <div class="learning-card reveal">
-          <div class="learning-tag">학습중</div>
-          <div class="learning-title">웹 프로그래밍</div>
-          <div class="learning-desc">HTML과 CSS를 시작으로 웹 개발의 기초를 다지고 있습니다</div>
-        </div>
       </div>
+
     </section>
 
     <div class="divider"><hr /></div>
 
-    <section id="contact">
-      <div class="sec-header reveal">
+    <!-- ══════════════════════════════
+         SKILLS  (sticky label)
+    ══════════════════════════════ -->
+    <section id="skills-section" class="sticky-section">
+
+      <div class="sticky-label">
         <span class="sec-num">03</span>
+        <h2 class="sec-title">기술</h2>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="sticky-content">
+        <div class="learning-header reveal">학습 완료</div>
+        <div class="skills-grid reveal">
+          <div class="skill-chip"><div class="skill-icon">©️</div><div class="skill-name">C</div></div>
+          <div class="skill-chip"><div class="skill-icon">⚙️</div><div class="skill-name">C++</div></div>
+          <div class="skill-chip"><div class="skill-icon">☕</div><div class="skill-name">Java</div></div>
+          <div class="skill-chip"><div class="skill-icon">🤖</div><div class="skill-name">Kotlin</div></div>
+          <div class="skill-chip"><div class="skill-icon">🐍</div><div class="skill-name">Python</div></div>
+          <div class="skill-chip"><div class="skill-icon">🗄️</div><div class="skill-name">MySQL</div></div>
+          <div class="skill-chip"><div class="skill-icon">🌐</div><div class="skill-name">HTML / CSS</div></div>
+        </div>
+
+        <div class="learning-header reveal">학습 중</div>
+        <div class="learning-grid">
+          <div class="learning-card reveal">
+            <div class="learning-tag">2학년 1학기</div>
+            <div class="learning-title">RPA</div>
+            <div class="learning-desc">반복적인 업무를 <br /> 자동화하는 기술을 익히고 있습니다</div>
+          </div>
+          <div class="learning-card reveal reveal-delay-1">
+            <div class="learning-tag">2학년 1학기</div>
+            <div class="learning-title">웹 프로그래밍</div>
+            <div class="learning-desc">HTML과 CSS를 시작으로 <br /> 웹 개발의 기초를 다지고 있습니다</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="divider"><hr /></div>
+
+    <!-- ══════════════════════════════
+         PROJECTS  (sticky label)
+    ══════════════════════════════ -->
+    <section id="projects-section" class="sticky-section">
+
+      <div class="sticky-label">
+        <span class="sec-num">04</span>
+        <h2 class="sec-title">프로젝트</h2>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="sticky-content">
+        <div class="project-grid">
+
+          <div class="project-card reveal">
+            <div class="project-thumb">🌐</div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+              </div>
+              <div class="project-title">포트폴리오 웹사이트</div>
+              <div class="project-desc">
+                강의를 수강하며 학습한 HTML/CSS를 활용해
+                <br /> 직접 제작한 개인 포트폴리오 사이트입니다
+                <br> 반응형 레이아웃, 스크롤 애니메이션, Parallax 효과를 구현했습니다
+              </div>
+              <div class="project-footer">
+                <span class="project-status status-done">✓ 완료</span>
+                <a href="https://kmj228.github.io/" target="_blank" class="project-link">GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-thumb">🤖</div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">RPA</span>
+              </div>
+              <div class="project-title">업무 자동화 스크립트</div>
+              <div class="project-desc">
+                RPA 수업에서 진행할 <br /> 반복 업무 자동화 프로젝트입니다
+              </div>
+              <div class="project-footer">
+                <span class="project-status status-plan">○ 예정</span>
+                <a href="https://github.com/kmj228" target="_blank" class="project-link">GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-thumb">🗄️</div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">Java</span>
+                <span class="project-tag">MySQL</span>
+              </div>
+              <div class="project-title">도서 관리 시스템</div>
+              <div class="project-desc">
+                Java와 MySQL을 활용한 <br /> 콘솔 기반 도서 관리 프로그램입니다
+              </div>
+              <div class="project-footer">
+                <span class="project-status status-plan">○ 예정</span>
+                <a href="https://github.com/kmj228" target="_blank" class="project-link">GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-delay-3">
+            <div class="project-thumb">📱</div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="project-tag">Kotlin</span>
+                <span class="project-tag">Android</span>
+              </div>
+              <div class="project-title">안드로이드 메모 앱</div>
+              <div class="project-desc">
+                Kotlin으로 제작할 <br /> 간단한 메모 앱입니다
+              </div>
+              <div class="project-footer">
+                <span class="project-status status-plan">○ 예정</span>
+                <a href="https://github.com/kmj228" target="_blank" class="project-link">GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <div class="divider"><hr /></div>
+
+    <!-- ══════════════════════════════
+         CONTACT  (sticky label)
+    ══════════════════════════════ -->
+    <section id="contact-section" class="sticky-section" style="padding-bottom: 130px;">
+
+      <div class="sticky-label">
+        <span class="sec-num">05</span>
         <h2 class="sec-title">연락처</h2>
         <div class="sec-line"></div>
       </div>
-      <div class="contact-wrap">
-        <a href="tel:010-8764-1995" class="contact-card reveal">
-          <div class="contact-icon">📞</div>
-          <div class="contact-info">
-            <div class="contact-type">전화번호</div>
-            <div class="contact-value">010-8764-1995</div>
-          </div>
-          <div class="contact-arrow">→</div>
-        </a>
-        <a href="mailto:kmj228@tukorea.ac.kr" class="contact-card reveal">
-          <div class="contact-icon">✉️</div>
-          <div class="contact-info">
-            <div class="contact-type">이메일</div>
-            <div class="contact-value">kmj228@tukorea.ac.kr</div>
-          </div>
-          <div class="contact-arrow">→</div>
-        </a>
+
+      <div class="sticky-content">
+        <div class="contact-wrap">
+          <a href="tel:010-8764-1995" class="contact-card reveal">
+            <div class="contact-icon">📞</div>
+            <div class="contact-info">
+              <div class="contact-type">전화번호</div>
+              <div class="contact-value">010-8764-1995</div>
+            </div>
+            <div class="contact-arrow">→</div>
+          </a>
+          <a href="mailto:kmj228@tukorea.ac.kr" class="contact-card reveal reveal-delay-1">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-info">
+              <div class="contact-type">이메일</div>
+              <div class="contact-value">kmj228@tukorea.ac.kr</div>
+            </div>
+            <div class="contact-arrow">→</div>
+          </a>
+        </div>
       </div>
+
     </section>
 
   </main>
 
+  <!-- 맨 위로 버튼 -->
+  <button id="back-to-top" aria-label="맨 위로">↑</button>
+
   <footer>
-    <p>© 2026 &nbsp;<span>KimMinJae</span>&nbsp; · &nbsp;한국공학대학교 AI소프트웨어학과</p>
+    <p>© &nbsp;<span>2024591004 Kimminajae</span>&nbsp; · &nbsp;한국공학대학교 AI소프트웨어학과 </p>
   </footer>
 
   <script>
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), i * 70);
-          io.unobserve(e.target);
+    /* ── 스크롤 진행 바 ── */
+    const progressBar = document.getElementById('progress-bar');
+
+    /* ── 네비게이션 shrink ── */
+    const nav = document.getElementById('navbar');
+
+    /* ── 맨 위로 버튼 ── */
+    const backToTop = document.getElementById('back-to-top');
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ── 통합 스크롤 핸들러 ── */
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      // 진행 바
+      progressBar.style.width = (scrollY / docHeight * 100) + '%';
+
+      // 네비 축소
+      nav.classList.toggle('scrolled', scrollY > 60);
+
+      // 맨 위로 버튼 표시 (300px 이상 내려가면)
+      backToTop.classList.toggle('visible', scrollY > 300);
+
+    }, { passive: true });
+
+    /* ── Scroll reveal (위아래 반복) ── */
+    // unobserve 하지 않아서 뷰포트 벗어났다가 다시 들어올 때마다 재실행
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          // 뷰포트 벗어나면 클래스 제거 → 다시 내려오거나 올라오면 재애니메이션
+          entry.target.classList.remove('visible');
         }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    }, { threshold: 0.12 });
 
-    // Nav scroll class
-    const nav = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    });
-  </script>
-</body>
-</html>
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>�
